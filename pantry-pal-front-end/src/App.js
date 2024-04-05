@@ -6,36 +6,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Pantry from "./Pages/Pantry";
 import Recipes from "./Pages/Recipies";
+import Navbar from "./Pages/Components/Navbar";
+import Sidebar from "./Pages/Components/Sidebar";
 
 function App() {
   return (
     <Router>
-      <div>
-        {/* Links to navigate */}
-        <nav>
-          <ul>
-            <li>
-              <a href="/dashboard">Dashboard</a>
-            </li>
-            <li>
-              <a href="/pantry">Pantry</a>
-            </li>
-            <li>
-              <a href="/recipes">Recipes</a>
-            </li>
-          </ul>
-        </nav>
+      <Navbar></Navbar>
+      <Sidebar></Sidebar>
 
-        {/* Route configuration */}
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/pantry" element={<Pantry />} />
-          <Route path="/recipes" element={<Recipes />} />
+      {/* Route configuration */}
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/pantry" element={<Pantry />} />
+        <Route path="/recipes" element={<Recipes />} />
 
-          {/* Redirect to dashboard as the default route */}
-          <Route path="*" element={<Dashboard />} />
-        </Routes>
-      </div>
+        {/* Redirect to dashboard as the default route */}
+        <Route path="*" element={<Dashboard />} />
+      </Routes>
     </Router>
   );
 }
