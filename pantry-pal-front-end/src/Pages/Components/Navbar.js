@@ -1,4 +1,4 @@
-function Navbar() {
+function Pantry() {
   return (
     <div>
       {/* Links to navigate */}
@@ -25,4 +25,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Pantry;
