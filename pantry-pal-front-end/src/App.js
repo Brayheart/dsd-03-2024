@@ -13,14 +13,10 @@ function App() {
   return (
     <Router>
       <div className="flex">
-        {/* Ensures Sidebar and main content are side by side */}
         <Sidebar />
         <div className="flex-1">
-          {/* Takes up remaining space */}
           <Navbar />
-          {/* Main content that changes with the route */}
           <div className="p-4">
-            {/* Adds some padding around the routed content */}
             <Routes>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/pantry" element={<Pantry />} />
