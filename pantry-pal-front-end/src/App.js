@@ -12,18 +12,25 @@ import Sidebar from "./Pages/Components/Sidebar";
 function App() {
   return (
     <Router>
-      <Navbar></Navbar>
-      <Sidebar></Sidebar>
-
-      {/* Route configuration */}
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/pantry" element={<Pantry />} />
-        <Route path="/recipes" element={<Recipes />} />
-
-        {/* Redirect to dashboard as the default route */}
-        <Route path="*" element={<Dashboard />} />
-      </Routes>
+      <div className="flex">
+        {/* Ensures Sidebar and main content are side by side */}
+        <Sidebar />
+        <div className="flex-1">
+          {/* Takes up remaining space */}
+          <Navbar />
+          {/* Main content that changes with the route */}
+          <div className="p-4">
+            {/* Adds some padding around the routed content */}
+            <Routes>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/pantry" element={<Pantry />} />
+              <Route path="/recipes" element={<Recipes />} />
+              <Route path="/" element={<Dashboard />} /> {/* Home route */}
+              <Route path="*" element={<Dashboard />} /> {/* Catch-all route */}
+            </Routes>
+          </div>
+        </div>
+      </div>
     </Router>
   );
 }
