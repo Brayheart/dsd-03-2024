@@ -4,7 +4,6 @@ function Pantry() {
       <h2 className="text-2xl font-bold mb-6">My Ingredients</h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         {/* My Ingredients cards */}
-        {/* Repeat this structure for each ingredient */}
         <div className="bg-gray-300 p-4 rounded-lg space-y-2">
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-semibold">Tomatoes</h3>
@@ -26,7 +25,6 @@ function Pantry() {
       <h2 className="text-2xl font-bold mb-6">Ingredients I Need</h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         {/* Ingredients I Need cards */}
-        {/* Repeat this structure for each ingredient */}
         <div className="bg-gray-300 p-4 rounded-lg space-y-2">
           <h3 className="text-lg font-semibold">Avocado</h3>
           <p>0 in Pantry</p>
